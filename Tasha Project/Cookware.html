@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasha Kitchen</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      
+        
+
+       
+    </style>
+</head>
+
+<body>
+     <!-- Example Code -->
+     <p class="h6 text-center text-light ">Free Shipping All Over Pakistan Within 24hrs Delivery in Karachi</p>
+
+     <hr>
+     <nav class="navbar navbar-expand-lg navbar-dark my-5 ">
+       <div class="container">
+        <a href="index.html" class="logo-container d-flex justify-content-center align-items-center">
+            <img src="/images/logo.png" alt="Brand Logo" class="img-fluid">
+        </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="about.html">About Us
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link " href="product.html"  role="button" 
+                 aria-expanded="false">
+                 Products
+               </a>
+            
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="contact.html">Contact US</a>
+             </li>
+           </ul>
+           <form class="d-flex my-2" role="search">
+             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+ 
+ 
+           </form>
+           <div>
+             <a class="nav-link lo" href="checkout.html"><i class="fa-solid fa-cart-shopping mx-2 my-2 "></i></a>
+ 
+           </div>
+ 
+           <div>
+             <a href="register.html"><i class="fas fa-user men-icon mx-2"></i></a>
+           </div>
+ 
+         </div>
+       </div>
+     </nav>
+    <!-- Header Section -->
+    <header class="bg-warning text-dark text-center py-3">
+        <h1 class="lead">Kitchen Essentials</h1>
+        <p class="leads">Upgrade your kitchen with our premium products!</p>
+    </header>
+
+    <div class="container-fluid my-4">
+        <div class="row">
+            <!-- Left Sidebar (Categories) -->
+            <aside class="col-md-3">
+                <div class="p-3 bg-light shadow rounded">
+                    <h4 class="text-center mb-4">Categories</h4>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">
+                            <a href="Cookware.html" class="text-decoration-none text-dark">
+                                <i class="bi bi-cup-straw me-2"></i>Cookware
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="Refrigeration.html" class="text-decoration-none text-dark">
+                                <i class="bi bi-blender me-2"></i>Refrigeration
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="Appliances.html" class="text-decoration-none text-dark">
+                                <i class="bi bi-utensils me-2"></i>Appliances
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="Food-Storage.html" class="text-decoration-none text-dark">
+                                <i class="bi bi-egg-fried me-2"></i>Food Storage
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="dining.html" class="text-decoration-none text-dark">
+                                <i class="bi bi-glass-cup me-2"></i>Dining
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </aside>
+
+            <!-- Main Content (Product Cards) -->
+            <main class="col-md-9">
+                <marquee behavior="alternate" direction="left"><h4 class="mb-4  fw-bold my-3">Cookware Products</h4></marquee>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+                    <!-- Product Cards will be dynamically inserted here -->
+                     
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <button id="go-to-cart" class="btn btn-primary rounded-circle shadow-lg" style="width: 60px; height: 60px;">
+            <i class="bi bi-cart-fill"></i>
+        </button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items" class="mb-3">
+                        <!-- Cart items will appear here -->
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h5>Total: $<span id="cart-total">0.00</span></h5>
+                        <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="checkout-btn" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+     <footer class="text-center text-lg-start">
+        <div class="container">
+          <div class="row text-center text-md-start">
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-title">About Us</h5>
+              <p>
+                Welcome to Tasha! We provide the best kitchen appliance to make
+                yor kitchen more beautiful.
+                
+            </p>
+            </div>
+  
+            <!-- Quick Links Section -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-title">Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="product.html">Kitchenware</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+  
+            <!-- Social Media Section -->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="footer-title">Follow Us</h5>
+              <p>Connect with us for the latest recipes and kitchen hacks:</p>
+              <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.pinterest.com" target="_blank" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+                <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3 mt-4" style="background-color: rgba(255, 87, 87, 0.1);">
+          <i class="bi bi-egg-fried"></i> © 2024 Kitchen Delight | Cook with Passion!
+        </div>
+      </footer>
+    </body>
+    </html>
+
+      <script>
+        // Sample product data
+      // Updated product data with 18 items
+const products = [
+    { id: 1, name: "Cooking Induction Cooker", price: 79.99, image: "/images/cate-1.webp" },
+    { id: 2, name: "Cooking Electric Stove",price: 129.99, image: "/images/cate-2.webp" },
+    { id: 3, name: "Cooking Air Fryer", price: 49.99, image: "/images/cate-3.webp" },
+    { id: 4, name: "Frying Pans Non-Stick Nickel", price: 29.99, image: "/images/cate-4.webp" },
+    { id: 5, name: "Cast Aluminium Frying Pans", price: 89.99, image: "/images/cate-5.webp" },
+    { id: 6, name: "Stainless Steel Pan, 12 inch Frying Pan", price: 39.99, image: "/images/cate-6.webp" },
+    { id: 7, name: "Cookware Sets Cool Touch Handles", price: 79.99, image: "/images/cate-7.webp" },
+    { id: 8, name: "Hard Anodized Nonstick Cookware Set 17 Piece", price: 129.99, image: "/images/cate-8.webp" },
+    { id: 9, name: "Ceramic Nonstick Cookware Set", price: 49.99, image: "/images/cate-9.webp" },
+    { id: 10, name: "Hard Anodised Biryani Handi with Glass Lid", price: 29.99, image: "/images/cate-10.webp" },
+    { id: 11, name: "Premium Steel Patila Handi", price: 89.99, image: "/images/cate-11.webp" },
+    { id: 12, name: "Non Stick, Handi", price: 39.99, image: "/images/cate-12.webp" },
+    { id: 13, name: "Aluminum Kadai [Karahi]", price: 79.99, image: "/images/cate-13.webp" },
+    { id: 14, name: "Iron Karahi Kadai Kadhai Deep Fry Iron Wok Balti Dish With Handle", price: 129.99, image: "/images/cate-14.webp" },
+    { id: 15, name: "Pital Kadai [Karahi]", price: 49.99, image: "/images/cate-15.webp" },
+    { id: 16, name: "Cooks Standard Nonstick Square Grill Pan", price: 29.99, image: "/images/cate-16.webp" },
+    { id: 17, name: "Aluminum Griddle Pan ", price: 89.99, image: "/images/cate-17.webp" },
+    { id: 18, name: "Indoor BBQ Grill", price: 39.99, image: "/images/cate-18.webp" },
+ ];
+
+    
+        // Cart state
+        let cart = [];
+    
+        // Load products
+        const productList = document.getElementById("product-list");
+        const searchInput = document.querySelector('input[type="search"]');
+    
+        function displayProducts(filteredProducts) {
+            productList.innerHTML = '';
+            filteredProducts.forEach(product => {
+                const card = `
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <p class="text-primary fw-bold">$${product.price.toFixed(2)}</p>
+                                <button class="btn btn-warning w-100 add-to-cart" data-id="${product.id}">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productList.innerHTML += card;
+            });
+        }
+    
+        // Initial display of products
+        displayProducts(products);
+    
+        // Search functionality
+        searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query)
+            );
+            displayProducts(filteredProducts);
+        });
+    
+        // Add to cart functionality
+        document.addEventListener("click", (e) => {
+            if (e.target.classList.contains("add-to-cart")) {
+                const productId = parseInt(e.target.getAttribute("data-id"));
+                const existingItem = cart.find(item => item.id === productId);
+    
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    const product = products.find(p => p.id === productId);
+                    cart.push({ ...product, quantity: 1 });
+                }
+    
+                updateCart();
+                document.getElementById("go-to-cart").style.display = "block";
+            }
+        });
+    
+        // Update cart display
+        function updateCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+    
+            cartItems.innerHTML = cart.map(item => `
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span>${item.name} (${item.quantity})</span>
+                    <div>
+                        <button class="btn btn-sm btn-outline-secondary decrease-quantity" data-id="${item.id}">-</button>
+                        <button class="btn btn-sm btn-outline-secondary increase-quantity" data-id="${item.id}">+</button>
+                        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                </div>
+            `).join("");
+    
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = total.toFixed(2);
+        }
+    
+        // Change quantity
+        document.addEventListener("click", (e) => {
+            const productId = parseInt(e.target.getAttribute("data-id"));
+            const item = cart.find(item => item.id === productId);
+    
+            if (e.target.classList.contains("increase-quantity")) {
+                item.quantity++;
+            }
+    
+            if (e.target.classList.contains("decrease-quantity") && item.quantity > 1) {
+                item.quantity--;
+            } else if (e.target.classList.contains("decrease-quantity") && item.quantity === 1) {
+                cart = cart.filter(item => item.id !== productId);
+            }
+    
+            updateCart();
+    
+            if (cart.length === 0) {
+                document.getElementById("go-to-cart").style.display = "none";
+            }
+        });
+    
+        // Show cart modal
+        document.getElementById("go-to-cart").addEventListener("click", () => {
+            const cartModal = new bootstrap.Modal(document.getElementById("cartModal"));
+            cartModal.show();
+        });
+    // Clear cart
+    document.getElementById("clear-cart").addEventListener("click", () => {
+        if (confirm("Are you sure you want to clear the cart?")) {
+            cart = [];
+            renderCart();
+            sessionStorage.removeItem("cart");
+        }
+    });
+
+        // Checkout functionality
+        document.getElementById("checkout-btn").addEventListener("click", () => {
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            window.location.href = "checkout.html";
+        });
+    </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasha Kitchen</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body {
+                font-family: 'Times New Roman', serif;
+                background-color: #fff5f5;
+                color: Black;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+            }
+    
+            header {
+                background-color: #660000;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            h1 {
+                margin: 0;
+            }
+    
+            .slider-container {
+                position: relative;
+                width: 80%;
+                margin: 30px auto;
+                overflow: hidden;
+            }
+    
+            .slider {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+    
+            .slider-item {
+                min-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .slider-item img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+    
+            .slider-item p {
+                font-size: 16px;
+                line-height: 1.6;
+                text-align: center;
+            }
+    
+            .slider-item h3 {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+    
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #660000;
+                color: white;
+                border: none;
+                padding: 15px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+    
+            .prev {
+                left: 10px;
+            }
+    
+            .next {
+                right: 10px;
+            }
+    
+            .footer {
+                background-color: #660000;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+    
+            @media (max-width: 768px) {
+                .slider-container {
+                    width: 95%;
+                }
+            }
+        </style>
+    
+</head>
+
+<body>
+    <!-- Example Code -->
+    <p class="h6 text-center text-light ">Free Shipping All Over Pakistan Within 24hrs Delivery in Karachi</p>
+
+    <hr>
+    <nav class="navbar navbar-expand-lg navbar-dark my-5 ">
+        <div class="container">
+            <a href="index.html" class="logo-container d-flex justify-content-center align-items-center">
+                <img src="/images/logo.png" alt="Brand Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i
+                                class="fa-solid fa-house"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="product.html" role="button" aria-expanded="false">
+                            Products
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact US</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+                </form>
+                <div>
+                    <a class="nav-link lo" href="checkout.html"><i class="fa-solid fa-cart-shopping mx-2 my-2 "></i></a>
+
+                </div>
+
+                <div>
+                    <a href="register.html"><i class="fas fa-user men-icon mx-2"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+   
+     
+    
+    <header>
+        <h1>Our Customer Reviews on Tasha Kitchen Appliances</h1>
+    </header>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slider-item">
+                <img src="/images/p1.jpg" alt="Reviewer 1">
+                <h3>Maham</h3>
+                <p>“This product is amazing! It has made my life so much easier. Highly recommended!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p2.webp" alt="Reviewer 2">
+                <h3>Ali</h3>
+                <p>“The quality of this appliance is fantastic. It works like a charm every time I use it!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p3.jpg" alt="Reviewer 3">
+                <h3>Sameera</h3>
+                <p>“Absolutely love it! The design is sleek, and it performs even better than expected!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p4.jpeg" alt="Reviewer 4">
+                <h3>Zahid</h3>
+                <p>“I use this appliance daily, and it has never let me down. Great investment!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p5.jpeg" alt="Reviewer 5">
+                <h3>Usman</h3>
+                <p>“The performance is outstanding. Very easy to use and clean. I love it!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p6.jpg" alt="Reviewer 6">
+                <h3>Iqra</h3>
+                <p>“Perfect for my kitchen. It’s exactly what I needed and does the job perfectly.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p1.jpg" alt="Reviewer 7">
+                <h3>Saima</h3>
+                <p>“Very satisfied with this purchase. It’s reliable, easy to use, and looks great in my kitchen!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p2.webp" alt="Reviewer 8">
+                <h3>Harris</h3>
+                <p>“An excellent product. I couldn’t be happier with its performance and durability.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p3.jpg" alt="Reviewer 9">
+                <h3>Maheen</h3>
+                <p>“A must-have! It’s super efficient and works exactly as described. I highly recommend it.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p4.jpeg" alt="Reviewer 10">
+                <h3>Osama</h3>
+                <p>“This is hands down the best product I’ve bought this year. Well worth the investment.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p5.jpeg" alt="Reviewer 11">
+                <h3>Raheel</h3>
+                <p>“I absolutely love this appliance. It’s become a staple in my kitchen.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p6.jpg" alt="Reviewer 12">
+                <h3>Raheela</h3>
+                <p>“Super easy to use and very effective. It has saved me so much time!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p1.jpg" alt="Reviewer 13">
+                <h3>Marvi</h3>
+                <p>“I’m impressed! This appliance does exactly what it promises and more.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p2.webp" alt="Reviewer 14">
+                <h3>Ejaz</h3>
+                <p>“An excellent product, very durable and easy to clean. I would buy again!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p3.jpg" alt="Reviewer 15">
+                <h3>Uzma</h3>
+                <p>“I’m very happy with this purchase. It performs better than expected!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p4.jpeg" alt="Reviewer 16">
+                <h3>Habib</h3>
+                <p>“This is one of the best products I have used. It’s so efficient and effective.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p5.jpeg" alt="Reviewer 17">
+                <h3>Ikram</h3>
+                <p>“I would definitely recommend this appliance to anyone. It’s easy to use and works perfectly!”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p6.jpg" alt="Reviewer 18">
+                <h3>Shanzey</h3>
+                <p>“Great value for the price. Does exactly what I need it to do. Very happy with it.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p1.jpg" alt="Reviewer 19">
+                <h3>Saweera</h3>
+                <p>“Works great. I use it all the time and it’s still in perfect condition.”</p>
+            </div>
+            <div class="slider-item">
+                <img src="/images/p2.webp" alt="Reviewer 20">
+                <h3>Saira</h3>
+                <p>“Amazing appliance! I can't imagine my kitchen without it. It's the best!”</p>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-center text-lg-start">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- About Section -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-title">About Us</h5>
+                    <p>
+                        Welcome to Tasha! We provide the best kitchen appliance to make
+                        yor kitchen more beautiful.
+                        
+                    </p>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Kitchenware</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <p>Connect with us for the latest  kitchen appliances</p>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.pinterest.com" target="_blank" title="Pinterest"><i
+                                class="bi bi-pinterest"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" title="YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-4" style="background-color: rgba(255, 87, 87, 0.1);">
+            <i class="bi bi-egg-fried"></i> © 2024 Tasha Kitchen Appliances!
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slider-item');
+        if (index >= slides.length) currentIndex = 0;
+        if (index < 0) currentIndex = slides.length - 1;
+
+        const offset = -currentIndex * 100;
+        document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+        currentIndex++;
+        showSlide(currentIndex);
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        currentIndex--;
+        showSlide(currentIndex);
+    });
+
+    setInterval(() => {
+        currentIndex++;
+        showSlide(currentIndex);
+    }, 10000);  
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
